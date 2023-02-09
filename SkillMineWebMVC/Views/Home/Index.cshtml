@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h3>
+                @ViewData["message"]
+            </h3>
+        </div>
+    </div>
+    @if (ViewData["Colors"] != null)
+    {
+        <div class="row">
+            <div class="col-12">
+                <ol>
+                    @foreach(string color in (IEnumerable<string>)ViewData["Colors"])
+                    {
+                        <li>
+                            @color
+                        </li>
+                    }
+                </ol>
+            </div>
+                <h3>
+                @TempData["message"]
+                </h3>
+        </div>
+
+    }
+</div>
+
+
+
+

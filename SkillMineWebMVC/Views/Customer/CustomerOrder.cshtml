@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "CustomerOrder";
+}
+
+<h1>CustomerOrder</h1>
+
+<h3>Personal Details</h3>
+@using (Html.BeginForm())
+{
+          <div class="mb-3">
+            <label>Enter Name</label>
+        @Html.TextBox("pname")
+        </div> 
+        <div class="mb-3">
+            <label>Enter Mobile Number</label>
+        @Html.TextBox("mobile")
+        </div>  
+        <div class="mb-3">
+            <label>Select Payment mode</label>
+        @Html.RadioButton("Payment","Online") Online
+        @Html.RadioButton("Payment","Cash") Cash
+        </div> 
+        
+        <div class="mb-3">
+            <label>Select Snacks</label>
+        @Html.DropDownList("snacks")
+        </div>
+        <div class="mb-3">
+            <input type="submit" value="Save Form"/> 
+        </div>
+}
